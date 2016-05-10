@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 	int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
 	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
 
+
 	void Awake ()
 	{
 		// Create a layer mask for the floor layer.
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 	void Move (float h, float v)
 	{
 		// Set the movement vector based on the axis input.
-		movement.Set (h, 0f, v);
+		movement= transform.forward * v + transform.right * h;
 
 		// Normalise the movement vector and make it proportional to the speed per second.
 		movement = movement.normalized * speed * Time.deltaTime;
@@ -62,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			// Create a vector from the player to the point on the floor the raycast from the mouse hit.
 			Vector3 playerToMouse = floorHit.point - transform.position;
-
+			print ("ttt");
 			// Ensure the vector is entirely along the floor plane.
 			playerToMouse.y = 0f;
 
