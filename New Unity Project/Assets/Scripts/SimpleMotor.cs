@@ -7,8 +7,13 @@ public class SimpleMotor : MonoBehaviour {
   //public bool useLocalDirection;
   //public Vector3 direction = Vector3.zero;
 
-	public GameObject Player;
+	private GameObject Player;
 
+	void Awake()
+	{
+		Player = GameObject.FindGameObjectWithTag ("Player");
+		transform.LookAt (transform.position + Player.transform.forward);
+	}
 	
 	// Update is called once per frame
 	void Update () 
@@ -16,8 +21,12 @@ public class SimpleMotor : MonoBehaviour {
     	//if(useLocalDirection) transform.position += transform.TransformDirection(direction) * speed * Time.deltaTime;
     	//else transform.position += direction * speed * Time.deltaTime;
 
-
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		transform.position += Player.transform.forward * speed * Time.deltaTime;
+		transform.position += transform.forward * speed;
 	}
+
+	/*void OnTriggerEnter(Collider _coll)
+	{
+		if (_coll.GetComponent<Life>)
+			currentLifePoints--;
+	}*/
 }
