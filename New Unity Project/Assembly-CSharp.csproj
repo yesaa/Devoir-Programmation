@@ -51,6 +51,8 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\RotationMotor.cs" />
      <Compile Include="Assets\Scripts\SeekTarget.cs" />
+     <Compile Include="Assets\Scripts\Shoot.cs" />
+     <Compile Include="Assets\Scripts\SimpleMotor.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
