@@ -18,8 +18,6 @@ public class SimpleMotor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-    	//if(useLocalDirection) transform.position += transform.TransformDirection(direction) * speed * Time.deltaTime;
-    	//else transform.position += direction * speed * Time.deltaTime;
 
 		transform.position += transform.forward * speed;
 	}

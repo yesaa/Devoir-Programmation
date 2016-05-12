@@ -16,9 +16,10 @@ public class Life : MonoBehaviour {
     currentLifePoints = lifePointsStart;
 	}
 
-  public void restorePoint(int nbPoints){
+  /*public void restorePoint(int nbPoints)
+	{
     currentLifePoints = Mathf.Min(currentLifePoints + nbPoints, lifePointsMax);
-  }
+  	}*/
 	
 	// Update is called once per frame
 	void Update () {
