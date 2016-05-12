@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[AddComponentMenu("Camera-Control/Mouse Look")]
+
 public class CameraMouse : MonoBehaviour 
 {
 	public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
