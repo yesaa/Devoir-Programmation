@@ -7,12 +7,12 @@ public class SimpleMotor : MonoBehaviour {
   //public bool useLocalDirection;
   //public Vector3 direction = Vector3.zero;
 
-	private GameObject Player;
+	private GameObject camera;
 
 	void Awake()
 	{
-		Player = GameObject.FindGameObjectWithTag ("Player");
-		transform.LookAt (transform.position + Player.transform.forward);
+		camera = GameObject.FindGameObjectWithTag ("MainCamera");
+		transform.LookAt (transform.position + camera.transform.forward);
 	}
 	
 	// Update is called once per frame
